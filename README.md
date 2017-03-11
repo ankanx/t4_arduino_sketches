@@ -1,1 +1,1 @@
-# t4_arduino_sketches
+# Arduino sketches involved in the Term 4 car Project at SEM
