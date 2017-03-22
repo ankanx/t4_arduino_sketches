@@ -1,5 +1,9 @@
 /*
 
+  safetyCheck.ino - Code for motor control on the Term 4 car at SEM.
+  Created by Andreas Fransson, Mars 10, 2017.
+  Released into the public domain.
+
 Simple control sketch for the Safety Check.
 
 Radio Controller trimming set to: < < V
@@ -85,6 +89,7 @@ void loop() {
 
   /*
    * Read incoming values from the controller. (Divided by 10 for ease)
+   * This reads lenght of pulses set to High.
    */
   Steering_value = pulseIn(Steering_Radio_PIN, HIGH)/10;
   Engine_value = pulseIn(Engine_Radio_PIN, HIGH)/10;
@@ -131,7 +136,7 @@ void loop() {
    * ESC (Enngine)
    */
   if(Steering_value > 160){
-    steering.write(130);
+    steering.write(115);
   }else if(Steering_value < 140){
     steering.write(70);
   }else{
