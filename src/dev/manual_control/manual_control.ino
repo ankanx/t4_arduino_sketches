@@ -25,7 +25,7 @@ unsigned long delayTime = 0;
 int value;
 
 MotorController testMotor(9,10);
-protocolParse parser;
+//protocolParse parser;
 
 void setup() {
   complete = false;
